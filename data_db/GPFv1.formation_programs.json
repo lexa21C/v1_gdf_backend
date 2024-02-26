@@ -1,0 +1,25 @@
+[{
+  "_id": {
+    "$oid": "65dbaabc72d6d045fde526a9"
+  },
+  "program_name": "ANÁLISIS Y DESARROLLO DE SOFTWARE",
+  "program_code": 228118,
+  "total_duration": 3984,
+  "competence": [
+    {
+      "$oid": "65dba75fdf468d1e0103cd00"
+    },
+    {
+      "$oid": "65dbbdc22bc7eb6f5bb857a7"
+    }
+  ],
+  "program_level": "6",
+  "thematic_line": "1",
+  "createdAt": {
+    "$date": "2024-02-25T21:01:48.994Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-26T02:25:36.743Z"
+  },
+  "program_version": "1"
+}]
