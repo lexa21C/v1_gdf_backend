@@ -25,6 +25,7 @@ exports.createProfile = async (req, res) => {
     try {
         const createdProfile = await Profile.create(reqProfile);
         estructuraApi.setResult(createdProfile, "Perfil creado exitosamente");
+        return res.json(estructuraApi.toResponse());
     } catch (error) {
         console.error('Error al crear el perfil:', error);
         estructuraApi.setStatus(500, 'Error', 'Se ha producido un error al intentar crear el perfil. Por favor, inténtelo nuevamente más tarde.');

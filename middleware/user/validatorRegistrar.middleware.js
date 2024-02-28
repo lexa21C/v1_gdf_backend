@@ -17,6 +17,7 @@ async function validateUserData(req, res, next) {
 
 const validate = async (req, res, next) => {
   const { body } = req;
+  console .log(body)
   let apiStructure = new ApiStructure();
   // Define aquí los campos esperados
   const expectedFields = ["complete_names", "email", "password","type_profile", "formation_program", "training_center"];
@@ -27,12 +28,12 @@ const validate = async (req, res, next) => {
   if (hasUnexpectedFields) {
     return res.status(400).json({ error: 'No se permiten campos adicionales en la solicitud.' });
   }
-  const existingProfile = await Profile.findOne({ type_profile: body.type_profile });
-  if (!existingProfile) {
-      // El perfil no existe, manejar el error
-      apiStructure.setStatus("Failed", 400, `El perfil '${body.type_profile}' no existe`);
-      return res.json(apiStructure.toResponse());
-  }
+  // const existingProfile = await Profile.findOne({ _id: body.type_profile });
+  // if (!existingProfile) {
+  //     // El perfil no existe, manejar el error
+  //     apiStructure.setStatus("Failed", 400, `El perfil '${body.type_profile}' no existe`);
+  //     return res.json(apiStructure.toResponse());
+  // }
 
   // Define aquí tus reglas de validación personalizadas
   const customValidationRules = [

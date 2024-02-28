@@ -34,17 +34,15 @@ exports.createUser = async (req, res) => {
   let apiStructure = new ApiStructure();
   let { complete_names, email, password, type_profile, formation_program, training_center } = req.body;
   const errors = validationResult(req);
+  console.log(req.body)
   
   if (!errors.isEmpty()) {
     return res.status(400).json({ errors: errors.array() });    
   }
-  const existingProfile = await Profile.findOne({ type_profile: type_profile });
- //* Asigna el resultado de la búsqueda a la variable 'type_profile
+  const existingProfile = await Profile.findOne({ _id: type_profile });
  
-  // Cifra la variable '"password", password' utilizando una función de cifrado y guarda el resultado en 'passwordHash'
   const passwordHash = await encrypt(password);
   
-  // Crea el usuario si todo está en orden
   try {
     const newUser = await User.create({
       complete_names,

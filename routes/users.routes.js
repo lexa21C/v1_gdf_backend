@@ -12,7 +12,7 @@ const { validateUserData,validate} = require('../middleware/user/validatorRegist
 router.get('/user', UserController.allUser);
 router.get('/user/show/:id_user', UserController.myUser);
 
-router.post('/user',validateUserData, validate,UserController.createUser);
+router.post('/user',validateUserData,UserController.createUser);
 router.put('/user/:id_user', UserController.UpdateUser);
 router.delete('/user/:id_user', UserController.deleteUser);
 router.get('/profileuser/:id_user', UserController.ProfileUser);
