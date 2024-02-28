@@ -24,18 +24,15 @@ exports.signup = async (req, res) => {
     const tokenSession = await tokenSign(user);
 
     if (isPasswordValid) {
-      console.log('Autenticación exitosa');
       return res.json({
         user,
         tokenSession,
       });
     } else {
-      console.log('Autenticación fallida');
       apiStructure.setStatus(409, "Error", "Credenciales inválidas");
       return res.json(apiStructure.toResponse());
     }
   } catch (err) {
-    console.error(err);
     const apiStructure = new ApiStructure();
     apiStructure.setStatus(500, 'Error', 'Error del servidor');
     return res.json(apiStructure.toResponse());

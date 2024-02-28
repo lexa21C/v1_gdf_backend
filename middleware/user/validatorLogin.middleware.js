@@ -5,8 +5,7 @@ const ApiStructure = require('../../helpers/responseApi.js');
 const validateLoginMiddleware = async (req, res, next) => {
   const { email, password } = req.body;
   const apiStructure = new ApiStructure();
-  console.log(req.body)
-  console.log('validateLoginMiddleware')
+
   // Verifica que se proporcionen email y password en la solicitud
   if (!email || !password) {
     apiStructure.setStatus("Failed", 400, 'Debe proporcionar un email y una contraseña.');
@@ -24,7 +23,7 @@ const validateLoginMiddleware = async (req, res, next) => {
 
   if (!existingUser) {
     apiStructure.setStatus("error", 400, "no existe el usuario");
-    console.log()
+
     return res.status(400).json(apiStructure.toResponse());
   }
 
@@ -34,7 +33,7 @@ const validateLoginMiddleware = async (req, res, next) => {
 
 
 const validate = async (req, res, next) => {
-    console.log('-------------------------------------------------------------')
+
     // Define aquí tus reglas de validación personalizadas
     const  customValidationRules= [
       check("email")

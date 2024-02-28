@@ -20,7 +20,6 @@ async function validateCodeUniqueness(req, res, next) {
 
 const validateFormationProgram = async (req, res, next) => {
     const apiStructure = new ApiStruture();
-    console.log('middleware')
     const formationProgram = [
         check("program_name")
             .trim()

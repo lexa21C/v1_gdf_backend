@@ -31,7 +31,7 @@ exports.all = async (req, res) => {
 
 exports.allRecords = async (req, res) => {
     const apiStructure = new ApiStructure();
-    console.log('records 223')
+
     try {
         const { formationPrograms_Id } = req.params;
 
@@ -80,7 +80,6 @@ exports.recordById = async (req, res) => {
 exports.createRecords = async (req, res) => {
     const { number_record, start_date, finish_date, formation_program, user } = req.body;
     const apiStructure = new ApiStructure();
-    console.log('fecha',start_date)
     try {
         const existingRecord = await Records.findOne({ number_record: number_record });
         if (existingRecord) {

@@ -18,7 +18,6 @@ exports.allCompentences = async (req, res) => {
             return res.json(apiStructure.toResponse());
         }
     } catch (error) {
-        console.log(error)
         apiStructure.setStatus(500, "Error", "Ocurrió12 un error al procesar la solicitud. Por favor, inténtelo de nuevo más tarde.");
     }
     return res.json(apiStructure.toResponse());
@@ -138,18 +137,13 @@ exports.compoetenceByFormation= async (req, res) => {
         
         const formationProgram = await Formation_programs
         .findById(formation_program_id,'competence')
-        console.log('--------------------------------------------------------')
-        console.log(formationProgram)
-        console.log('--------------------------------------------------------')
-
+      
 
         const competenceIds =formationProgram.competence
-        console.log(competenceIds)
 
 // Mapear cada ID y realizar una búsqueda en el modelo Competences
 const competencesData = await Promise.all(competenceIds.map(async (competenceId) => {
-    console.log(competenceId.toString())
-
+  
   try {
     // Buscar el documento de competencia por ID
     const competence = await Competences.findById(competenceId.toString()).lean();
@@ -175,7 +169,7 @@ const competencesData = await Promise.all(competenceIds.map(async (competenceId)
             apiStructure.setStatus(404, "info", "No se encontró el programa de formación");
             return res.json(apiStructure.toResponse());
         }
-        console.log()
+    
         
         apiStructure.setResult(competencesData);
 
@@ -187,38 +181,7 @@ const competencesData = await Promise.all(competenceIds.map(async (competenceId)
     return res.json(apiStructure.toResponse());
 };
 
-// exports.updateCompetences = async (req, res) => {
-//     let apiStructure = new ApiStructure();
-//     let id_competence = req.params.id_competence
-//     try {
 
-//         let { _id, labor_competition,labor_competence_code,competition_name,labor_competition_versio,estimated_duration, quarter, program} = req.body;
-//         // const competence = await Competence.findById({_id: id_competence})
-//         // if(!competence){
-//         //     apiStructure.setResult()
-//         // }
-    
-//         console.log(('competence udpated'))
-//         const competenceUpdate = await Competence.findByIdAndUpdate(
-//             {_id:id_competence},
-//             {_id: labor_competence_code,  labor_competition,labor_competence_code,competition_name,labor_competition_versio,estimated_duration, quarter, program},
-//             {new: true}  
-//             )
-//         console.log(competenceUpdate)   
-//         if (competenceUpdate.length > 0){
-//             console.log(competenceUpdate)
-//             apiStructure.setResult(competenceUpdate,"Actualizado")
-//         } else {
-//             apiStructure.setStatus(404, "info", "No se  encuentra la competencia ")
-//         }
-//     } catch {
-
-
-//     }
-
-
-//     res.json(apiStructure.toResponse())
-// }
 exports.updateCompetences = async (req, res) => {
     const apiStructure = new ApiStructure();
     const id_competence = req.params.id_competence;

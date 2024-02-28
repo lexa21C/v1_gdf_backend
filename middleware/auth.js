@@ -3,10 +3,7 @@ const ApiStructure = require('../helpers/responseApi.js')
 
  const checkAuth = async (req, res, next) => {
   const responseapi = new ApiStructure();
-  console.log('_-----------------------------------------------------------')
-  console.log('_-----------------------------------------------------------')
-  console.log('_-----------------------------------------------------------')
-  console.log(req)
+
   try {
     if (!req.headers.authorization) {
       responseapi.setStatus(403, "error", "No Tienes Authorización");
@@ -14,7 +11,7 @@ const ApiStructure = require('../helpers/responseApi.js')
     } else {
       // TRAER EL TOKEN. SEPARAR EL TEXTO Y EL TOKEN. COJER SOLO EL ULTIMO DATO QUE ES EL TOKEN
       const token = req.headers.authorization.split(" ").pop();
-      console.log("token", token)
+
       //  VERIFICAR QUE EL TOKEN PERTENESCA AL APLICATIVO Y QUE NO ESTE CADUCADO
       const tokenData = await verifyToken(token);
 

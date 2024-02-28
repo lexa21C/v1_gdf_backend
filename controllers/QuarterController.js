@@ -12,12 +12,10 @@ exports.allQuarters = async (req, res) => {
         .findById(formation_program_id,'competence')
         
         const quarters = await Quarter.find({ formation_program: formation_program_id }).populate('competence');
-        console.log(quarters)
         apiStructure.setResult(quarters);
 
         return res.json(apiStructure.toResponse());
     } catch (error) {
-        console.error("Error en allQuarters:", error);
         apiStructure.setStatus(500, "Error", "Ocurrió un error al procesar la solicitud. Por favor, inténtelo de nuevo más tarde.");
     }
     return res.json(apiStructure.toResponse());
@@ -28,20 +26,13 @@ exports.createQuarter = async (req, res) => {
     const apiStructure = new ApiStructure();
 
     try {
-        // // Comprobar si el número ya existe en la base de datos
-        // const existingQuarter = await Quarter.findOne({ number: number });
 
-        // if (existingQuarter) {
-        //     // Devuelve una respuesta de error si el número no es único
-        //     apiStructure.setStatus("Failed", 400, `El número del trimestre '${number}' ya existe`);
-        // } else {
-        //     // Crea el Trimestre si el número es único
             const newQuarter = await Quarter.create({
                 number,
                 competence,
                 formation_program
             });
-             console.log('newQuarter', newQuarter)
+
             apiStructure.setResult(newQuarter, 'Trimestre creado con éxito');
         
     } catch (error) {

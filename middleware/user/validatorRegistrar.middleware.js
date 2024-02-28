@@ -28,7 +28,6 @@ const validate = async (req, res, next) => {
     return res.status(400).json({ error: 'No se permiten campos adicionales en la solicitud.' });
   }
   const existingProfile = await Profile.findOne({ type_profile: body.type_profile });
-  console.log(!!existingProfile);
   if (!existingProfile) {
       // El perfil no existe, manejar el error
       apiStructure.setStatus("Failed", 400, `El perfil '${body.type_profile}' no existe`);

@@ -88,7 +88,6 @@ exports.UpdateUser = async (req, res) => {
     // Check if the new email already exists in the database
     const existingUser = await User.findOne({ email: email, _id: { $ne: id_user } });
     if (existingUser) {
-      console.log("existe")
       apiStructure.setStatus("Failed", 400, "Email already exists");
       return res.json(apiStructure.toResponse());
     }
@@ -162,13 +161,13 @@ exports.ProfileUser = async (req, res) => {
 exports.filterUser = async (req, res) => {
   let apiStructure = new ApiStructure();
   let { buscar, buscarId } = req.params;
-  console.log('buscar')
+
   await User.find({ [buscar]: buscarId }).select("email complete_names ")
     .then((success) => {
       if (success.length == 0) {
         apiStructure.setStatus(404, "info", "User null");
       } else {
-        console.log('Valor encontrado:', success); 
+    
         apiStructure.setResult(success);
       }
     })

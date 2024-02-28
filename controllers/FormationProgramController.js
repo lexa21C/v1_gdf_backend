@@ -87,7 +87,7 @@ exports.createFormstionPrograms = async (req, res) => {
             program_level,
             thematic_line
         } = req.body;
-        console.log(req.body);
+;
           const existingProgramLevel = await Programs_level.findOne({
           _id: program_level,
         });
@@ -132,7 +132,7 @@ exports.formationProgramsById = async (req, res) => {
 
         if (formationPrograms) {
             apiStructure.setResult(formationPrograms);
-            console.log('get'. formationPrograms)
+
             return res.json(apiStructure.toResponse());
         } else {
             apiStructure.setStatus(404, "Info", "No existe el programa de formación");
@@ -162,7 +162,7 @@ exports.updateFormationPrograms = async (req, res) => {
             program_level,
             thematic_line
         } = req.body;
-        console.log(req.body)
+  
 
         const updatedFormationProgram = await Formation_programs.findByIdAndUpdate(
             id_formation_program,
@@ -178,13 +178,13 @@ exports.updateFormationPrograms = async (req, res) => {
             },
             { new: true }
         );
-        console.log('actualiza')
+    
         if (updatedFormationProgram) {
-            console.log('actualizar', updatedFormationProgram)
+        
             apiStructure.setResult(updatedFormationProgram, "Programa de formación actualizado correctamente");
             return res.json(apiStructure.toResponse());
         } else {
-            console.log('no actualiza')
+
             apiStructure.setStatus(404, "Info", "No existe el programa de formación");
         }
     } catch (error) {
@@ -202,10 +202,8 @@ exports.deleteFormationPrograms = async (req, res) => {
         const idFormationPrograms = req.params.id_formation_programs;
 
         const formationPrograms = await Formation_programs.findById(idFormationPrograms);
-        console.log(formationPrograms)
 
         if (formationPrograms) {
-            console.log('eliminar');
             await Formation_programs.findByIdAndDelete(idFormationPrograms); // Mueve esta línea aquí
             apiStructure.setResult("Programa de formación eliminado correctamente");
             return res.json(apiStructure.toResponse());
@@ -251,15 +249,14 @@ exports.deleteFormationPrograms = async (req, res) => {
 exports.allFormationProgram = async (req, res) => {
     const apiStructure = new estructuraApi();
     const { id_formation_program } = req.params;
-    console.log('---------------------------------')
-    console.log(id_formation_program)
+
     
     try {
         const formationProgram = await Formation_programs.findById(id_formation_program).populate('competence').populate('program_level').populate('thematic_line');
 
         if (formationProgram) {
             apiStructure.setResult(formationProgram);
-            console.log('get 1', formationProgram)
+
             return  res.json(apiStructure.toResponse());
         } else {
             apiStructure.setStatus(404, "Info", "No se encontró el programa de formación");

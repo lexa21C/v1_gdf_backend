@@ -35,18 +35,10 @@ exports.resultById = async (req, res) => {
 
         // Buscar un resultado de aprendizaje por su ID
         const result = await Learning_results.findById(id_Result);
-        console.log(result)
+
         apiStructure.setResult(result);
         return res.json(apiStructure.toResponse());
-        // if (!result) {
-        //     console.log('ingresa  if ')
-        //     apiStructure.setResult(result);
-        //     return res.json(apiStructure.toResponse());
-        // } else {
-        //     apiStructure.setStatus(404, "Info", "No existe el Resultado de Aprendizaje con el ID proporcionado");         
-        //     return res.json(apiStructure.toResponse());
 
-        // }
     } catch (error) {
         
         apiStructure.setStatus(500, "Error", "Ocurrió un error al procesar la solicitud.");
@@ -61,34 +53,17 @@ exports.createResults = async (req, res) => {
     const apiStructure = new ApiStructure();
     try {
         const {learning_result_code, learning_result, competence, _id } = req.body;
-        const newObjectId = new mongoose.Types.ObjectId();
-        // Verificar si el código ya existe en la base de datos
-        const newObjectIdString = newObjectId.toString();
-        const existingResult = await Learning_results.findOne({ _id });
-        
-        // Convertir learning_result a mayúsculas
+  
         const learningResultUpperCase = learning_result.toUpperCase();
 
         const createdResult = await Learning_results.create({
-            _id: newObjectIdString,
             learning_result_code,
             learning_result: learningResultUpperCase,
             competence
         });
-        console.log('nuevo objeto creado')
-        console.log(createdResult)
 
         apiStructure.setResult(createdResult, "Resultado de aprendizaje creado exitosamente");
-        // if (existingResult) {
-        //     apiStructure.setStatus("Failed", 400, `El Código ya existe`);
-        // } else {
-        //     // Crear un nuevo resultado de aprendizaje
-        //     const createdResult = await Learning_results.create({
-        //         _id, learning_result, competence
-        //     });
-
-        //     apiStructure.setResult(createdResult, "Resultado de aprendizaje creado exitosamente");
-        // }
+        return res.json(apiStructure.toResponse());
     } catch (error) {
         apiStructure.setStatus(500, "Error ", "Se ha producido un error al registrar el Resultado de aprendizaje. Por favor, inténtelo nuevamente más tarde.");
     }
@@ -134,7 +109,6 @@ exports.deleteResults = async (req, res) => {
 
     try {
         const idResult = req.params.id_result;
-        console.log(idResult)
         const deletedResult = await Learning_results.findByIdAndDelete(idResult);
 
         if (deletedResult) {

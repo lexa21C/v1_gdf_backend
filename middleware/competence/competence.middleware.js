@@ -24,7 +24,6 @@ const validateCompetence = async (req, res, next) => {
         apiStructure.setStatus("Failed", 400, "No se permiten campos adicionales en la solicitud." )
         return res.json(apiStructure.toResponse());
     }
-    console.log('middleware')
     const competence =  [
         check("labor_competition")
             .trim()
