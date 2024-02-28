@@ -1,0 +1,70 @@
+[{
+  "_id": {
+    "$oid": "65df3f11ba1a09f831f4e535"
+  },
+  "program_name": "ANÁLISIS Y DESARROLLO DE SOFTWARE",
+  "program_code": 228118234,
+  "total_duration": 3984,
+  "competence": [
+    {
+      "$oid": "65df3eeeba1a09f831f4e532"
+    },
+    {
+      "$oid": "65df4594ba1a09f831f4e600"
+    },
+    {
+      "$oid": "65df45b1ba1a09f831f4e604"
+    },
+    {
+      "$oid": "65df45faba1a09f831f4e608"
+    },
+    {
+      "$oid": "65df463eba1a09f831f4e60c"
+    },
+    {
+      "$oid": "65df4670ba1a09f831f4e610"
+    },
+    {
+      "$oid": "65df4695ba1a09f831f4e614"
+    },
+    {
+      "$oid": "65df46c2ba1a09f831f4e618"
+    },
+    {
+      "$oid": "65df476cba1a09f831f4e61c"
+    },
+    {
+      "$oid": "65df47d8ba1a09f831f4e620"
+    },
+    {
+      "$oid": "65df4a49ba1a09f831f4e631"
+    },
+    {
+      "$oid": "65df4f1c8747536a810544e5"
+    },
+    {
+      "$oid": "65df4f508747536a810544e9"
+    },
+    {
+      "$oid": "65df4f778747536a810544ed"
+    },
+    {
+      "$oid": "65df55968747536a81054575"
+    },
+    {
+      "$oid": "65df55b88747536a81054579"
+    },
+    {
+      "$oid": "65df561c8747536a8105458d"
+    }
+  ],
+  "program_level": "6",
+  "thematic_line": "3",
+  "createdAt": {
+    "$date": "2024-02-28T14:11:29.733Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T16:04:46.348Z"
+  },
+  "program_version": "1"
+}]

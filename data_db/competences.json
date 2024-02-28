@@ -1,0 +1,267 @@
+[{
+  "_id": {
+    "$oid": "65df3eeeba1a09f831f4e532"
+  },
+  "labor_competition": "ESPECIFICACIÓN DE REQUISITOS DEL SOFTWARE",
+  "labor_competence_code": 220501092,
+  "labor_competition_version": "1",
+  "estimated_duration": "144 horas",
+  "createdAt": {
+    "$date": "2024-02-28T14:10:54.666Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:10:54.666Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4594ba1a09f831f4e600"
+  },
+  "labor_competition": "ELABORACIÓN DE LA PROPUESTA TÉCNICA DEL SOFTWARE",
+  "labor_competence_code": 220501094,
+  "labor_competition_version": "1",
+  "estimated_duration": "144",
+  "createdAt": {
+    "$date": "2024-02-28T14:39:16.211Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:39:16.211Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df45b1ba1a09f831f4e604"
+  },
+  "labor_competition": "INTERACTUAR EN LENGUA INGLESA DE  FORMA ORAL Y ESCRITA DENTRO DE CONTEXTOS SOCIALES Y LABORALES SEGÚN LOS CRITERIOS ESTABLECIDOS POR EL MARCO COMÚN EUROPEO DE \nREFERENCIA PARA LAS LENGUAS.",
+  "labor_competence_code": 240202501,
+  "labor_competition_version": "1",
+  "estimated_duration": "33",
+  "createdAt": {
+    "$date": "2024-02-28T14:39:45.910Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:39:45.910Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df45faba1a09f831f4e608"
+  },
+  "labor_competition": "RAZONAR CUANTITATIVAMENTE FRENTE A SITUACIONES SUSCEPTIBLES DE SER ABORDADAS DE MANERA MATEMÁTICA EN CONTEXTOS LABORALES, SOCIALES Y PERSONALES",
+  "labor_competence_code": 240201517,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T14:40:58.816Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:40:58.816Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df463eba1a09f831f4e60c"
+  },
+  "labor_competition": "UTILIZAR HERRAMIENTAS INFORMÁTICAS \nDE ACUERDO CON NECESIDADES DE \nMANEJO DE INFORMACIÓN.",
+  "labor_competence_code": 220501046,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T14:42:06.367Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:42:06.367Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4670ba1a09f831f4e610"
+  },
+  "labor_competition": "ANÁLISIS DE LA ESPECIFICACIÓN DE REQUISITOS DEL SOFTWARE",
+  "labor_competence_code": 220501093,
+  "labor_competition_version": "1",
+  "estimated_duration": "288",
+  "createdAt": {
+    "$date": "2024-02-28T14:42:56.583Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:42:56.583Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4695ba1a09f831f4e614"
+  },
+  "labor_competition": "CIENCIAS \nNATURALES (FÍSICA)",
+  "labor_competence_code": 220201501,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T14:43:33.663Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:43:33.663Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df46c2ba1a09f831f4e618"
+  },
+  "labor_competition": "MODELADO DE LOS ARTEFACTOS DEL SOFTWARE. ",
+  "labor_competence_code": 220501095,
+  "labor_competition_version": "1",
+  "estimated_duration": "336",
+  "createdAt": {
+    "$date": "2024-02-28T14:44:18.287Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:44:18.287Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df476cba1a09f831f4e61c"
+  },
+  "labor_competition": "ÉTICA PARA LA CONSTRUCCIÓN DE \nUNA CULTURA DE PAZ.",
+  "labor_competence_code": 240201526,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T14:47:08.961Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:47:08.961Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df47d8ba1a09f831f4e620"
+  },
+  "labor_competition": "CONSTRUCCIÓN DEL SOFTWARE ",
+  "labor_competence_code": 220501095,
+  "labor_competition_version": "1",
+  "estimated_duration": "1008",
+  "createdAt": {
+    "$date": "2024-02-28T14:48:56.399Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:48:56.399Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4a49ba1a09f831f4e631"
+  },
+  "labor_competition": "CONSTRUCCIÓN DEL SOFTWARE",
+  "labor_competence_code": 220501096,
+  "labor_competition_version": "1",
+  "estimated_duration": "1008",
+  "createdAt": {
+    "$date": "2024-02-28T14:59:21.289Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T14:59:21.289Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4f1c8747536a810544e5"
+  },
+  "labor_competition": "INVESTIGACIÓN",
+  "labor_competence_code": 240201064,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T15:19:56.555Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T15:19:56.555Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4f508747536a810544e9"
+  },
+  "labor_competition": "PROTECCIÓN PARA LA SALUD Y EL MEDIO AMBIENTE",
+  "labor_competence_code": 220601501,
+  "labor_competition_version": "1",
+  "estimated_duration": "44",
+  "createdAt": {
+    "$date": "2024-02-28T15:20:48.442Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T15:20:48.442Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df4f778747536a810544ed"
+  },
+  "labor_competition": "IMPLANTACIÓN DEL\nSOFTWARE",
+  "labor_competence_code": 220501097,
+  "labor_competition_version": "1",
+  "estimated_duration": "99",
+  "createdAt": {
+    "$date": "2024-02-28T15:21:27.098Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T15:21:27.098Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df55968747536a81054575"
+  },
+  "labor_competition": "CULTURA EMPRENDEDORA Y EMPRESARIAL",
+  "labor_competence_code": 240201525,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T15:47:34.242Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T15:47:34.242Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df55b88747536a81054579"
+  },
+  "labor_competition": "ADOPCIÓN DE BUENAS PRÁCTICAS EN EL PROCESO DE \nDESARROLLO DE SOFTWARE.",
+  "labor_competence_code": 220501098,
+  "labor_competition_version": "1",
+  "estimated_duration": "66",
+  "createdAt": {
+    "$date": "2024-02-28T15:48:08.513Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T15:48:08.513Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df561c8747536a8105458d"
+  },
+  "labor_competition": "COMUNICACIÓN",
+  "labor_competence_code": 240201524,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T15:49:48.482Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T15:49:48.482Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df5a5fdee649a83c360e3d"
+  },
+  "labor_competition": "EJERCER LOS DERECHOS FUNDAMENTALES DEL \nTRABAJO DE ACUERDO AL RECONOCIMIENTO DE LA \nDIGNIDAD",
+  "labor_competence_code": 210201501,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T16:07:59.192Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T16:07:59.192Z"
+  }
+},{
+  "_id": {
+    "$oid": "65df5a86dee649a83c360e43"
+  },
+  "labor_competition": "ACTIVIDAD FÍSICA Y HÁBITOS DE VIDA SALUDABLE.",
+  "labor_competence_code": 230101507,
+  "labor_competition_version": "1",
+  "estimated_duration": "48",
+  "createdAt": {
+    "$date": "2024-02-28T16:08:38.378Z"
+  },
+  "updatedAt": {
+    "$date": "2024-02-28T16:08:38.378Z"
+  }
+}]
